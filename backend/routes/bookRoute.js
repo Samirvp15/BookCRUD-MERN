@@ -15,6 +15,7 @@ router.post('/', async (request, response) => {
         message: 'Send all required fields: title, author, publishYear',
       });
     }
+
     const newBook = {
       title: request.body.title,
       author: request.body.author,
