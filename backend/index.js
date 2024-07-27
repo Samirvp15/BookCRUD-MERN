@@ -35,7 +35,7 @@ app.get('/', (request, response) => {
 export const connectDB = async () => {
   try {
     app.listen(port, () => {
-      console.log(`listening on ; ${port}`);
+      console.log(`listening on : ${port} ...`);
     });
 
     //mongoose.set('strictQuery', false);
