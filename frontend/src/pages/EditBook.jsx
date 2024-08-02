@@ -19,9 +19,9 @@ const EditBook = () => {
     axios
       .get(`http://localhost:3000/books/${id}`)
       .then((response) => {
-        setAuthor(response.data.author)
-        setPublishYear(response.data.publishYear)
-        setTitle(response.data.title)
+        setAuthor(response.data.book.author)
+        setPublishYear(response.data.book.publishYear)
+        setTitle(response.data.book.title)
         setLoading(false)
       })
       .catch((error) => {
@@ -37,6 +37,7 @@ const EditBook = () => {
       author,
       publishYear,
     }
+
     setLoading(true)
     axios
       .put(`http://localhost:3000/books/${id}`, data)
@@ -49,7 +50,7 @@ const EditBook = () => {
         setLoading(false)
         // alert('An error happened. Please Chack console');
         enqueueSnackbar('Error', { variant: 'error' })
-        console.log(error)
+        console.log(error.response.data)
       })
   }
 
