@@ -8,8 +8,12 @@ dotenv.config();
 
 const app = express();
 const port = process.env.PORT ?? 1234;
+// Disable header X-Powered-By: 
+app.disable('x-powered-by');
 // Middleware for parsing request body
 app.use(express.json());
+// Middleware for handle CORS - All Origins allowed (*) 
+app.use(cors());
 
 // Middleware for handling CORS POLICY
 // Option 1: Allow All Origins with Default of cors(*)
@@ -23,12 +27,17 @@ app.use(cors());
 //   })
 // );
 
+//INDEX PAGE
 app.get('/', (request, response) => {
     console.log(request);
     return response.status(234).send('Welcome To MERN Stack Tutorial');
   });
   
+
+  //BOOK ROUTER
   app.use('/books', booksRoute);
+
+
 
 
 //Connection DATABASE

@@ -1,13 +1,28 @@
 
-POST http://localhost:3000/books/post
+POST http://localhost:3000/books
 Content-Type: application/json
 
 {
-  "title": "La Iliada",
-  "author": "Homero",
-  "publishYear": 1982
+  "title": "El principito",
+  "author": "Alexandra Torres",
+  "publishYear": 1995
 }
 
 ###
-GET http://localhost:3000/books/get
+GET http://localhost:3000/books
 
+###
+GET  http://localhost:3000/books/66a410829f569a2fdebb44b7
+
+###
+PUT  http://localhost:3000/books/66a410829f569a2fdebb44b7
+Content-Type: application/json
+
+{
+  "title": "El principe caspian",
+  "author": "Alexandra Suares",
+  "publishYear": 2000
+}
+
+###
+DELETE http://localhost:3000/books/66ab063f5040ae282ec6016c
