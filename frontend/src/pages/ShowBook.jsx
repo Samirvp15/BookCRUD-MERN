@@ -14,7 +14,7 @@ const ShowBook = () => {
     axios
       .get(`http://localhost:3000/books/${id}`)
       .then((response) => {
-        setBook(response.data)
+        setBook(response.data.book)
         setLoading(false)
       })
       .catch((error) => {
@@ -22,7 +22,7 @@ const ShowBook = () => {
         setLoading(false)
       })
   }, [])
-
+ 
   return (
     <div className='p-4'>
       <BackButton />

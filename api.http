@@ -12,10 +12,10 @@ Content-Type: application/json
 GET http://localhost:3000/books
 
 ###
-GET  http://localhost:3000/books/66a410829f569a2fdebb44b7
+GET  http://localhost:3000/books/66ad14cf90635d416a3b51cd
 
 ###
-PUT  http://localhost:3000/books/66a410829f569a2fdebb44b7
+PUT  http://localhost:3000/books/66ad14cf90635d416a3b51cd
 Content-Type: application/json
 
 {
