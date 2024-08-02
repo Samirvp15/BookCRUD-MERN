@@ -3,9 +3,9 @@ POST http://localhost:3000/books
 Content-Type: application/json
 
 {
-  "title": "El principito",
-  "author": "Alexandra Torres",
-  "publishYear": 1995
+  "title": "Crimen y Castigo",
+  "author": "Fedor Dovstoievsky",
+  "publishYear": 1842
 }
 
 ###

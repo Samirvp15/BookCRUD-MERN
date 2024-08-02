@@ -5,10 +5,10 @@ import { bookController } from '../controllers/bookController.js';
 const router = express.Router();
 
 // Route for Save a new Book
-router.post('', bookController.post);
+router.post('/', bookController.post);
 
 // Route for Get All Books from database
-router.get('', bookController.get);
+router.get('/', bookController.get);
 
 // Route for Get :id Book from database
 router.get('/:id', bookController.getBook);
