@@ -4,6 +4,7 @@ import Spinner from '../components/Spinner.jsx'
 import axios from 'axios'
 import { useNavigate } from 'react-router-dom'
 import { useSnackbar } from 'notistack'
+import { BACKEND_URL } from '../../urls.js'
 
 const CreateBooks = () => {
   const [title, setTitle] = useState('')
@@ -21,7 +22,7 @@ const CreateBooks = () => {
     }
     setLoading(true)
     axios
-      .post('http://localhost:3000/books', data)
+      .post(`${BACKEND_URL}/books`, data)
       .then(() => {
         setLoading(false)
         enqueueSnackbar('Book Created successfully', { variant: 'success' })
